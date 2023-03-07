@@ -1,0 +1,368 @@
+/*   RESET CSS   */
+body,
+h1,
+h2,
+h3,
+p,
+img,
+i{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+nav{
+    list-style-type: none;
+}
+/* END RESET CSS */
+
+/* General */
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+h1,
+h2 {
+    font-weight: 700;
+    font-size: 22px;
+}
+h3 {
+    font-weight: 700;
+    font-size: 16px;
+}
+p{
+    font-weight: 400;
+}
+
+/* Main */
+.main {
+    max-width: 1440px;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 55px;
+    margin-right: 77px;
+}
+.logo {
+    width: 61.09px;
+    height: 19px;
+    margin-top: 44px;
+}
+header > nav {
+    display: flex;
+    align-items: flex-end;
+    list-style: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+header > nav > li {
+    margin-left: 69px;
+}
+header > nav > li > a {
+    display: flex;
+    justify-content: center;
+    padding-top: 46px;
+    border-top: 2px solid transparent;
+}
+header > nav > li > a:hover {
+    color: #0065fc;
+    border-top: 2px solid #0065fc;
+    padding-top: 46px;
+}
+
+/* research */
+.research {
+    margin-top: 63px;
+    margin-left: 55px;
+}
+.subtitle {
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+.researchInput {
+    display: flex;
+}
+.researchInput > button,
+.researchInput > input {
+    border: none;
+}
+.mapButton {
+    padding: 16px 18px 15px 18px;
+    color: #d9d9d9;
+    border-radius: 15px 0px 0px 15px;
+}
+.mapButton > svg {
+    width: 14px;
+    height: 18px;
+}
+.researchInput > input {
+    width: 236px;
+    height: 49px;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+.researchInput > input:focus {
+    outline: none;
+    background-color: #deebff;
+}
+.researchInput > input::placeholder {
+    font-weight: 700;
+    font-size: 18px;
+    padding-left: 17px;
+    color: black;
+}
+.researchButton {
+    color: white;
+    background-color: #0065fc;
+    padding: 14px 16px;
+    border-radius: 0px 15px 15px 0px;
+    font-size: 18px;
+}
+
+/* filtre */
+.filter {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    margin-left: 7px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.filter > a {
+    border: 2px solid #d9d9d9;
+    padding: 14.58px 20px;
+    border-radius: 30px;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px
+}
+.filter > a:hover {
+    background-color: #deebff;
+}
+.filter > a > svg {
+    margin-right: 10px;
+}
+
+/* info i */
+.info {
+    margin-top: 35px;
+    margin-left: 4px;
+    display: flex;
+    align-items: center;
+}
+.info > .circle {
+    display: flex;
+    align-items: center;
+    margin-right:11px;
+    padding: 7px 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 100%;
+}
+
+
+/* Result */
+.searchResult {
+    display: flex;
+    margin: 39px 50px 60px 50px;
+}
+
+/* Marseille */
+.marseilleSearchResult {
+    background-color: #d9d9d9;
+    border-radius: 20px;
+    padding-left: 40px;
+    padding-right: 9px;
+    margin-right: 40px;
+}
+.marseilleSearchResult > h2 {
+    margin-top: 42px;
+    margin-bottom: 23px;
+}
+.cardsMarseille {
+    display: flex;
+    flex-wrap: wrap;
+}
+.cardsMarseille > article {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    margin-right: 31px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.cardsMarseille > article > a {
+    display: flex;
+    flex-direction: column;
+}
+.cardsMarseille > article > a > img{
+    width: 238px; /* 246 - padding (same below with the height) */
+    height: 116px;
+    border-radius: 20px 20px 0px 0px;
+    padding: 4px;
+} 
+.cardsMarseille > article > a  .articleDescription {
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+    padding-right: 26px;
+    padding-top: 4px;
+    padding-bottom: 11px;
+}
+.cardsMarseille > article > a  .articleDescriptionTitle {
+    margin-bottom: 9px;
+}
+.cardsMarseille > article > a  .articleDescriptionText {
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+.cardsMarseille > article > a  .articleStars {
+    display: flex;
+    flex-direction: row;
+}
+.articleStars i {
+    color: #0065fc;
+    line-height: normal;
+    margin-right: 2px;
+    font-size: 12px;
+}
+.articleStars .lastStar {
+    color: #F2F2F2;
+    line-height: normal;
+    margin-right: 2px;
+    font-size: 12px;
+}
+
+
+.more {
+    margin-top: 10px;
+    margin-left: 4px;
+    margin-bottom: 46px;
+    font-size: 18px;
+}
+
+/* Popular */
+.popular {
+    background-color: #d9d9d9;
+    border-radius: 20px;
+    padding-left: 37px;
+    padding-right: 40px;
+}
+.popular .popularHeader {
+    margin-top: 41px;
+    margin-bottom: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardsPopular {
+    display: flex;
+    flex-direction: column;
+    width: 343px;
+}
+.cardsPopular > article {
+    margin-bottom: 33px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 20px;
+}
+.cardsPopular > article > a {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+}
+.cardsPopular > article > a > img {
+    height: 136px; /* 144 - padding (4px top & 4px bottom) (same below with the width) */
+    width: 129px;
+    border-radius: 20px 0px 0px 20px;
+    padding: 4px;
+}
+.cardsPopular > article > a .popularArticleDescription {
+    padding-left: 15px;
+    padding-right: 22px;
+    padding-top: 16px;
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cardsPopular > article > a .popularArticleDescriptionTitle {
+    margin-bottom: 7px;
+}
+.cardsPopular > article > a  .articleStars {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* activities */
+.activities {
+    padding-left: 50px;
+    padding-right: 10px;
+    padding-bottom: 61px;
+}
+.activities_cards {
+    display: flex;
+    margin-top: 18.47px;
+}
+.activities_cards > article {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-right: 43px;
+}
+.activities_cards_article_image{
+    margin-right: 43px;
+}
+.activities_cards > article > a >img{
+    width: 302px;
+    height: 387.51px;
+    border-radius: 20px 20px 0px 0px;
+}
+.cardDescription{
+    width:302px; 
+}
+.cardDescription > h3{
+    padding-left: 19px;
+    padding-bottom: 21px;
+    padding-top: 20px;
+    padding-right: 36px;
+}
+
+/* footer */
+footer {
+    display: flex;
+    margin-left:48px;
+    margin-right:53px;
+    padding-top: 45px;
+    padding-left: 70px;
+    padding-bottom: 58px;
+    background-color: #d9d9d9;
+}
+footer h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+footer > nav {
+    margin-right: 230px;
+}
+footer > nav > li {
+    margin-bottom: 16px;
+}
+ 
+footer > .lastNav {
+    margin-left:9px;
+}
