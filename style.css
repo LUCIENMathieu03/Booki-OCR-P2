@@ -1,4 +1,4 @@
-/*   RESET CSS   */
+/******************   RESET CSS   ****************/
 body,
 h1,
 h2,
@@ -17,9 +17,9 @@ a {
 nav{
     list-style-type: none;
 }
-/* END RESET CSS */
+/*********************** END RESET CSS *******************/
 
-/* General */
+/****************** General *************************/
 body {
     width: 100%;
     display: flex;
@@ -38,7 +38,7 @@ p{
     font-weight: 400;
 }
 
-/* Main */
+/****************** Main ******************/
 .main {
     min-width: 1024px;
     max-width: 1440px;
@@ -46,7 +46,7 @@ p{
     font-size: 16px;
 }
 
-/* Header */
+/****************** Header ******************/
 header {
     display: flex;
     justify-content: space-between;
@@ -80,7 +80,7 @@ header > nav > li > a:hover {
     padding-top: 46px;
 }
 
-/* research */
+/****************** research ******************/
 .research {
     margin-top: 63px;
     margin-left: 55px;
@@ -105,9 +105,10 @@ header > nav > li > a:hover {
     width: 14px;
     height: 18px;
 }
-.researchInput > input {
+.researchInput input {
     width: 236px;
     height: 49px;
+    padding-left: 10px ;
     border-top: 1px solid #d9d9d9;
     border-bottom: 1px solid #d9d9d9;
 }
@@ -129,7 +130,7 @@ header > nav > li > a:hover {
     font-size: 18px;
 }
 
-/* filtre */
+/****************** filtre ******************/
 .filter {
     display: flex;
     align-items: center;
@@ -155,7 +156,7 @@ header > nav > li > a:hover {
     margin-right: 10px;
 }
 
-/* info i */
+/****************** info (i) ******************/
 .info {
     margin-top: 35px;
     margin-left: 4px;
@@ -172,19 +173,20 @@ header > nav > li > a:hover {
 }
 
 
-/* Result */
+/****************** Result ******************/
 .searchResult {
     display: flex;
     margin: 39px 50px 65px 50px;
 }
 
-/* Marseille */
+/****************** Marseille ******************/
 .marseilleSearchResult {
     background-color: #d9d9d9;
     border-radius: 20px;
     padding-left: 40px;
     padding-right: 9px;
     margin-right: 40px;
+    
 }
 .marseilleSearchResult > h2 {
     margin-top: 42px;
@@ -193,22 +195,24 @@ header > nav > li > a:hover {
 .cardsMarseille {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 .cardsMarseille > article {
-    background-color: white;
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
-    margin-bottom: 30px;
-    margin-right: 31px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    width: 33%;
+    
 }
 .cardsMarseille > article > a {
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
+    margin-right: 31px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: white;
+    border-radius: 20px;
 }
 .cardsMarseille > article > a > img{
-    width: 238px; /* 246 - padding (same below with the height) */
     height: 116px;
     border-radius: 20px 20px 0px 0px;
     padding: 4px;
@@ -253,12 +257,14 @@ header > nav > li > a:hover {
     font-size: 18px;
 }
 
-/* Popular */
+/****************** Popular ******************/
 .popular {
     background-color: #d9d9d9;
     border-radius: 20px;
-    padding-left: 37px;
-    padding-right: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 369px;
+    flex-shrink: 0;
 }
 .popular .popularHeader {
     margin-top: 41px;
@@ -270,21 +276,22 @@ header > nav > li > a:hover {
 .cardsPopular {
     display: flex;
     flex-direction: column;
-    width: 343px;
+    
 }
 .cardsPopular > article {
     margin-bottom: 33px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 20px;
+    
 }
 .cardsPopular > article > a {
     background-color: white;
     display: flex;
     flex-direction: row;
     border-radius: 20px;
+    height: 144px;
 }
 .cardsPopular > article > a > img {
-    height: 136px; /* 144 - padding (4px top & 4px bottom) (same below with the width) */
     width: 129px;
     border-radius: 20px 0px 0px 20px;
     padding: 4px;
@@ -307,17 +314,21 @@ header > nav > li > a:hover {
 }
 
 
-/* activities */
+/****************** activities ******************/
 .activities {
-    padding-left: 50px;
-    padding-right: 10px;
-    padding-bottom: 65px;
+    margin-left: 50px;
+    margin-right: 10px;
+    margin-bottom: 65px;
 }
 .activities_cards {
     display: flex;
-    margin-top: 18.47px;
+    margin-top: 30px;
+    width: 100%;
 }
 .activities_cards > article {
+    width: 25%;
+}
+.activities_cards > article > a{
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -329,12 +340,11 @@ header > nav > li > a:hover {
     margin-right: 43px;
 }
 .activities_cards > article > a >img{
-    width: 302px;
     height: 387.51px;
     border-radius: 20px 20px 0px 0px;
 }
 .cardDescription{
-    width:302px; 
+
 }
 .cardDescription > h3{
     padding-left: 19px;
@@ -343,7 +353,7 @@ header > nav > li > a:hover {
     padding-right: 36px;
 }
 
-/* footer */
+/****************** footer ******************/
 footer {
     display: flex;
     margin-left:50px;
@@ -365,9 +375,4 @@ footer > nav > li {
  
 footer > .lastNav {
     margin-left:9px;
-}
-
-
-@media all and screen {
-    
 }
