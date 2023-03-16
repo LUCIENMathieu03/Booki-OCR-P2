@@ -5,7 +5,10 @@ h2,
 h3,
 p,
 img,
-i{
+i,
+a,
+input,
+ul {
     margin: 0;
     padding: 0;
     border: 0;
@@ -14,7 +17,8 @@ a {
     text-decoration: none;
     color: black;
 }
-nav{
+nav,
+ul {
     list-style-type: none;
 }
 /*********************** END RESET CSS *******************/
@@ -34,7 +38,7 @@ h3 {
     font-weight: 700;
     font-size: 16px;
 }
-p{
+p {
     font-weight: 400;
 }
 
@@ -50,55 +54,53 @@ p{
 header {
     display: flex;
     justify-content: space-between;
-    margin-left: 55px;
-    margin-right: 77px;
+    align-items: start;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 .logo {
     width: 61.09px;
     height: 19px;
-    margin-top: 44px;
+    margin-top: 30px;
 }
-header > nav {
+header > nav > ul {
     display: flex;
-    align-items: flex-end;
-    list-style: none;
     font-weight: 500;
     font-size: 16px;
 }
-header > nav > li {
+header > nav > ul > li {
     margin-left: 69px;
 }
-header > nav > li > a {
+header > nav > ul > li > a {
     display: flex;
     justify-content: center;
-    padding-top: 46px;
+    padding-top: 14px;
     border-top: 2px solid transparent;
 }
-header > nav > li > a:hover {
+header > nav > ul > li > a:hover {
     color: #0065fc;
     border-top: 2px solid #0065fc;
-    padding-top: 46px;
 }
 
 /****************** research ******************/
 .research {
-    margin-top: 63px;
-    margin-left: 55px;
+    margin-top: 60px;
+    margin-left: 50px;
 }
 .subtitle {
     margin-top: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 .researchInput {
     display: flex;
-}
-.researchInput > button,
-.researchInput > input {
-    border: none;
+    width: 377px;
+    height: 49px;
 }
 .mapButton {
-    padding: 16px 18px 15px 18px;
-    color: #d9d9d9;
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 15px 18px 16px 18px;
     border-radius: 15px 0px 0px 15px;
 }
 .mapButton > svg {
@@ -106,21 +108,26 @@ header > nav > li > a:hover {
     height: 18px;
 }
 .researchInput input {
-    width: 236px;
-    height: 49px;
-    padding-left: 10px ;
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
+    width: 100%;
+    height: 47px;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
 }
-.researchInput > input:focus {
+input[type="text" i] {
+    font-weight: 700;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.researchInput input:focus {
     outline: none;
     background-color: #deebff;
 }
-.researchInput > input::placeholder {
+.researchInput input::placeholder {
     font-weight: 700;
     font-size: 18px;
-    padding-left: 17px;
-    color: black;
+    color: #aeadad;
+    padding-left: 14px;
 }
 .researchButton {
     color: white;
@@ -128,80 +135,84 @@ header > nav > li > a:hover {
     padding: 14px 16px;
     border-radius: 0px 15px 15px 0px;
     font-size: 18px;
+    font-weight: 700;
+}
+.researchButton svg{
+    display: none;
 }
 
 /****************** filtre ******************/
 .filter {
     display: flex;
     align-items: center;
-    margin-top: 32px;
-    margin-left: 7px;
-    font-size: 18px;
-    font-weight: 700;
+    flex-direction: row;
+    margin-top: 35px;
+    height: 50px;
 }
-.filter > a {
-    border: 2px solid #d9d9d9;
-    padding: 14.58px 20px;
-    border-radius: 30px;
-    font-size: 17px;
+.filter > h3 {
+    font-size: 18px;
+}
+.filter > div {
+    display: flex;
+    margin-left: 15px;
+}
+.filter .buttonContainer a .buttonBorder {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 15px
+    padding: 0px 15px;
+    border: 2px solid #d9d9d9;
+    border-radius: 30px;
+    margin-right: 15px;
 }
-.filter > a:hover {
+.filter .buttonContainer a .buttonBorder h3 {
+    margin: 13px 0px 13px 10px;
+    font-size: 17px;
+}
+.filter .buttonContainer a .buttonBorder:hover {
     background-color: #deebff;
-}
-.filter > a > svg {
-    margin-right: 10px;
 }
 
 /****************** info (i) ******************/
 .info {
     margin-top: 35px;
-    margin-left: 4px;
     display: flex;
     align-items: center;
 }
 .info > .circle {
     display: flex;
     align-items: center;
-    margin-right:11px;
-    padding: 7px 10px;
-    border: 1px solid #D9D9D9;
+    margin-right: 10px;
+    padding: 6px 9px;
+    border: 1px solid #d9d9d9;
     border-radius: 100%;
 }
-
 
 /****************** Result ******************/
 .searchResult {
     display: flex;
-    margin: 39px 50px 65px 50px;
+    margin: 35px 50px 65px 50px;
 }
 
 /****************** Marseille ******************/
 .marseilleSearchResult {
-    background-color: #d9d9d9;
+    background-color: #f2f2f2;
     border-radius: 20px;
-    padding-left: 40px;
-    padding-right: 9px;
+    padding-left: 30px;
     margin-right: 40px;
-    
 }
 .marseilleSearchResult > h2 {
-    margin-top: 42px;
-    margin-bottom: 23px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .cardsMarseille {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
 }
 .cardsMarseille > article {
     display: flex;
     flex-direction: column;
-    width: 33%;
-    
+    width: 33.33%;
 }
 .cardsMarseille > article > a {
     display: flex;
@@ -211,28 +222,30 @@ header > nav > li > a:hover {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     background-color: white;
     border-radius: 20px;
+    height: 100%;
 }
-.cardsMarseille > article > a > img{
+.cardsMarseille > article > a > img {
     height: 116px;
     border-radius: 20px 20px 0px 0px;
     padding: 4px;
-} 
-.cardsMarseille > article > a  .articleDescription {
+    object-fit: cover;
+}
+.cardsMarseille > article > a .articleDescription {
     display: flex;
     flex-direction: column;
-    padding-left: 16px;
-    padding-right: 26px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-top: 4px;
-    padding-bottom: 11px;
+    padding-bottom: 15px;
 }
-.cardsMarseille > article > a  .articleDescriptionTitle {
+.cardsMarseille > article > a .articleDescriptionTitle {
     margin-bottom: 9px;
 }
-.cardsMarseille > article > a  .articleDescriptionText {
+.cardsMarseille > article > a .articleDescriptionText {
     font-size: 14px;
     margin-bottom: 9px;
 }
-.cardsMarseille > article > a  .articleStars {
+.cardsMarseille > article > a .articleStars {
     display: flex;
     flex-direction: row;
 }
@@ -240,26 +253,23 @@ header > nav > li > a:hover {
     color: #0065fc;
     line-height: normal;
     margin-right: 2px;
-    font-size: 12px;
+    font-size: 13.29px;
 }
 .articleStars .lastStar {
-    color: #F2F2F2;
+    color: #f2f2f2;
     line-height: normal;
     margin-right: 2px;
     font-size: 12px;
 }
 
-
 .more {
-    margin-top: 10px;
-    margin-left: 4px;
-    margin-bottom: 46px;
+    margin-bottom: 30px;
     font-size: 18px;
 }
 
 /****************** Popular ******************/
 .popular {
-    background-color: #d9d9d9;
+    background-color: #f2f2f2;
     border-radius: 20px;
     padding-left: 30px;
     padding-right: 30px;
@@ -267,8 +277,8 @@ header > nav > li > a:hover {
     flex-shrink: 0;
 }
 .popular .popularHeader {
-    margin-top: 41px;
-    margin-bottom: 26px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -276,13 +286,11 @@ header > nav > li > a:hover {
 .cardsPopular {
     display: flex;
     flex-direction: column;
-    
 }
 .cardsPopular > article {
-    margin-bottom: 33px;
+    margin-bottom: 30px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 20px;
-    
 }
 .cardsPopular > article > a {
     background-color: white;
@@ -292,33 +300,36 @@ header > nav > li > a:hover {
     height: 144px;
 }
 .cardsPopular > article > a > img {
-    width: 129px;
+    width: 119px;
     border-radius: 20px 0px 0px 20px;
-    padding: 4px;
+    padding: 4px 0px 4px 4px;
+    object-fit: cover;
 }
 .cardsPopular > article > a .popularArticleDescription {
     padding-left: 15px;
-    padding-right: 22px;
-    padding-top: 16px;
-    padding-bottom: 12px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .cardsPopular > article > a .popularArticleDescriptionTitle {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
 }
-.cardsPopular > article > a  .articleStars {
+.cardsPopular > article > a .articleStars {
     display: flex;
     flex-direction: row;
 }
 
-
-/****************** activities ******************/
+/****************** Activities ******************/
 .activities {
     margin-left: 50px;
-    margin-right: 10px;
+    margin-right: 50px;
     margin-bottom: 65px;
+}
+.activities > div {
+    padding-left: 30px;
 }
 .activities_cards {
     display: flex;
@@ -328,51 +339,271 @@ header > nav > li > a:hover {
 .activities_cards > article {
     width: 25%;
 }
-.activities_cards > article > a{
+.activities_cards > article > a {
     display: flex;
     flex-direction: column;
     background-color: white;
     border-radius: 20px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    margin-right: 43px;
+    margin-right: 30px;
+    height: 100%;
 }
-.activities_cards_article_image{
-    margin-right: 43px;
-}
-.activities_cards > article > a >img{
-    height: 387.51px;
+.activities_cards > article > a > img {
+    height: 380px;
     border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
 }
-.cardDescription{
-
-}
-.cardDescription > h3{
+.cardDescription > h3 {
     padding-left: 19px;
     padding-bottom: 21px;
     padding-top: 20px;
-    padding-right: 36px;
+    padding-right: 19px;
 }
 
-/****************** footer ******************/
+/****************** Footer ******************/
 footer {
     display: flex;
-    margin-left:50px;
-    margin-right:50px;
+    margin-left: 50px;
+    margin-right: 50px;
     padding-top: 20px;
-    padding-left: 20px;
-    background-color: #d9d9d9;
+    background-color: #f2f2f2;
 }
 footer h3 {
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 footer > nav {
     flex-grow: 1;
+    padding-left: 20px;
 }
 footer > nav > li {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 }
- 
-footer > .lastNav {
-    margin-left:9px;
+
+/****************** Responsive ******************/
+@media screen and (max-width: 1250px) {
+    .cardsMarseille > article {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    /****************** Main ******************/
+    .main {
+        min-width: 768px;
+    }
+    /****************** filtre ******************/
+    .filter {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+    .filter > .buttonContainer {
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    /****************** Result ******************/
+    .searchResult {
+        flex-direction: column;
+    }
+    /****************** Marseille ******************/
+    .marseilleSearchResult {
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+    /****************** Popular ******************/
+    .popular {
+        width: auto;
+    }
+    .popular .popularHeader {
+        margin-bottom: 20px;
+    }
+    .cardsMarseille > article {
+        width: 33.33%;
+    }
+    .cardsPopular {
+        flex-direction: row;
+    }
+    .cardsPopular > article {
+        width: 33.33%;
+        margin-right: 20px;
+    }
+    .cardsPopular > article > a > img {
+        width: 91.67px;
+    }
+    .cardsPopular > article > a > .popularArticleDescription {
+        overflow: scroll;
+    }
+    /****************** Activities ******************/
+    .activities_cards > article > a > img {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        width: 100%;
+    }
+    /****************** Main ******************/
+    .main {
+        min-width: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    /****************** Header ******************/
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    header > nav {
+        width: 100%;
+    }
+    header > nav > ul > li {
+        margin-left: 0px;
+    }
+    header > nav > ul {
+        display: flex;
+    }
+    header > nav > ul > li {
+        padding-top: 30px;
+        width: 50%;
+    }
+    header > nav > ul > li > a {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 13px;
+        padding-top: 0;
+        border-bottom: 2px solid transparent;
+        border-top: 0px;
+    }
+    header > nav > ul > li > a:hover {
+        color: #0065fc;
+        padding-bottom: 13px;
+        border-bottom: 2px solid #0065fc;
+        border-top: 0px;
+    }
+    /****************** research ******************/
+    .research {
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .researchInput {
+        width: auto;
+    }
+    .researchButton{
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+    }
+    .researchButton svg{
+        display: block;
+    }
+    .researchButton span{
+        display: none;
+    }
+    /****************** filtre ******************/
+    .filter {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+    .filter > .buttonContainer {
+        margin-left: 0px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .filter > .buttonContainer > a {
+        margin-bottom: 20px;
+        width: 49%;
+    }
+    .filter .buttonContainer a .buttonBorder {
+        margin-right: 0px;
+    }
+    /****************** Result ******************/
+    .searchResult {
+        flex-direction: column-reverse;
+        margin: 35px 0px 0px 0px;
+        width: 100%;
+    }
+    /****************** Popular ******************/
+    .popular {
+        width: auto;
+        border-radius: 0;
+        padding: 0px 20px;
+    }
+    .popular .popularHeader {
+        margin: 30px 0 15px 0;
+    }
+    .cardsPopular {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    .cardsPopular > article {
+        width: 100%;
+    }
+    /****************** Marseille ******************/
+    .marseilleSearchResult {
+        margin-bottom: 0px; /*????????*/
+        margin-top: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: white;
+    }
+    .cardsMarseille {
+        flex-direction: column;
+    }
+    .cardsMarseille > article {
+        width: 100%;
+    }
+    .cardsMarseille > article a {
+        margin-right: 0;
+    }
+    /****************** Activities ******************/
+    .activities {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px; /*????????*/
+    }
+    .activities > div {
+        padding: 0px 30px;
+    }
+    .activities_cards {
+        flex-direction: column;
+    }
+    .activities_cards > article {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .activities_cards > article > a > img {
+        height: 141px;
+    }
+    .activities_cards > article > a {
+        margin-right: 0px;
+    }
+    /****************** Footer ******************/
+    footer {
+        flex-direction: column;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-top: 20px;
+        width: 100%;
+    }
+    footer > nav {
+        margin-left: 30px;
+        margin-bottom: 50px;
+        padding-left: 0;
+    }
+    footer > nav:nth-child(1){
+        margin-top:30px;
+    }
 }
