@@ -43,6 +43,10 @@ p {
     font-size: 14px;
 }
 
+/*********************************************************/
+/********************** Desktop 1440px *******************/
+/*********************************************************/
+
 /****************** Main ******************/
 .main {
     min-width: 1024px;
@@ -64,6 +68,12 @@ header {
     width: 61.09px;
     height: 19px;
     margin-top: 30px;
+}
+.xlarge {
+    display: none;
+}
+.normal {
+    display: block;
 }
 header > nav > ul {
     display: flex;
@@ -108,9 +118,8 @@ header > nav > ul > li > a:hover {
     padding: 15px 18px 16px 18px;
     border-radius: 15px 0px 0px 15px;
 }
-.mapButton > svg {
-    width: 14px;
-    height: 18px;
+.mapButton > i {
+    font-size: 18px;
 }
 .researchInput input {
     width: 100%;
@@ -141,7 +150,7 @@ input[type="text" i] {
     font-size: 18px;
     font-weight: 700;
 }
-.researchButton svg {
+.researchButton i {
     display: none;
 }
 
@@ -162,12 +171,26 @@ input[type="text" i] {
 }
 .filter .buttonContainer a .buttonBorder {
     display: flex;
-
     align-items: center;
     padding: 0px 15px;
     border: 2px solid #d9d9d9;
     border-radius: 30px;
     margin-right: 15px;
+}
+.filter .buttonContainer a .buttonBorder i {
+    color: #0065fc;
+}
+.filter .buttonContainer a .buttonBorder .money {
+    font-size: 16.26px;
+}
+.filter .buttonContainer a .buttonBorder .person {
+    font-size: 22px;
+}
+.filter .buttonContainer a .buttonBorder .heart {
+    font-size: 18.33px;
+}
+.filter .buttonContainer a .buttonBorder .fire {
+    font-size: 20.08px;
 }
 .filter .buttonContainer a .buttonBorder h3 {
     margin: 13px 0px 13px 10px;
@@ -182,9 +205,8 @@ input[type="text" i] {
     margin-top: 35px;
     display: flex;
     align-items: center;
-    
 }
-.info p{
+.info p {
     font-size: 16px;
 }
 .info > .circle {
@@ -202,27 +224,27 @@ input[type="text" i] {
     margin: 35px 50px 65px 50px;
 }
 
-/****************** Marseille ******************/
-.marseilleSearchResult {
+/****************** MainSearchResult ******************/
+.mainSearchResult {
     background-color: #f2f2f2;
     border-radius: 20px;
     padding-left: 30px;
     margin-right: 40px;
 }
-.marseilleSearchResult > h2 {
+.mainSearchResult > h2 {
     margin-top: 30px;
     margin-bottom: 30px;
 }
-.cardsMarseille {
+.cardsMainSearchResult {
     display: flex;
     flex-wrap: wrap;
 }
-.cardsMarseille > article {
+.cardsMainSearchResult > article {
     display: flex;
     flex-direction: column;
     width: 33.33%;
 }
-.cardsMarseille > article > a {
+.cardsMainSearchResult > article > a {
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
@@ -232,13 +254,18 @@ input[type="text" i] {
     border-radius: 20px;
     height: 100%;
 }
-.cardsMarseille > article > a > img {
+.cardsMainSearchResult > article > a > img {
     height: 116px;
     border-radius: 20px 20px 0px 0px;
     padding: 4px;
     object-fit: cover;
 }
-.cardsMarseille > article > a .articleDescription {
+.cardsMainSearchResult > article > a > .xlarge,
+.cardsMainSearchResult > article > a > .medium,
+.cardsMainSearchResult > article > a > .small {
+    display: none;
+}
+.cardsMainSearchResult > article > a .articleDescription {
     display: flex;
     flex-direction: column;
     padding-left: 15px;
@@ -246,19 +273,24 @@ input[type="text" i] {
     padding-top: 4px;
     padding-bottom: 15px;
 }
-.cardsMarseille > article > a .articleDescriptionTitle {
+.cardsMainSearchResult > article > a .articleDescriptionTitle {
     margin-bottom: 8px;
 }
-.cardsMarseille > article > a .articleDescriptionText {
+.cardsMainSearchResult > article > a .articleDescriptionText {
     font-size: 14px;
     margin-bottom: 8px;
 }
-.cardsMarseille > article > a .articleStars {
+.cardsMainSearchResult > article > a .articleStars {
     display: flex;
     flex-direction: row;
 }
-.cardsMarseille > article > a .articleStars svg{
+.articleStars i {
     margin-right: 2.38px;
+    font-size: 13.25px;
+    color: #0065fc;
+}
+.articleStars .lastStar {
+    color: #f2f2f2;
 }
 
 .more {
@@ -281,6 +313,10 @@ input[type="text" i] {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.popular .popularHeader a .chart {
+    color: #0065fc;
+    font-size: 15.75px;
 }
 .cardsPopular {
     display: flex;
@@ -319,11 +355,20 @@ input[type="text" i] {
 .cardsPopular > article > a .articleStars {
     display: flex;
     flex-direction: row;
-    
 }
-.cardsPopular > article > a .articleStars svg {
+.cardsPopular > article > a .articleStars i {
     margin-right: 2px;
+    font-size: 12px;
 }
+.cardsPopular > article > a > .xlarge,
+.cardsPopular > article > a > .medium,
+.cardsPopular > article > a > .small {
+    display: none;
+}
+.cardsPopular > article > a > .large {
+    display: block;
+}
+
 /****************** Activities ******************/
 .activities {
     margin-left: 50px;
@@ -361,6 +406,14 @@ input[type="text" i] {
     padding-top: 20px;
     padding-right: 19px;
 }
+.activities_cards > article > a > .xlarge,
+.activities_cards > article > a > .medium,
+.activities_cards > article > a > .small {
+    display: none;
+}
+.activities_cards > article > a > .large {
+    display: block;
+}
 
 /****************** Footer ******************/
 footer {
@@ -378,17 +431,63 @@ footer > nav {
     flex-grow: 1;
     padding-left: 20px;
 }
-footer > nav  li {
+footer > nav li {
     margin-bottom: 15px;
 }
 
 /****************** Responsive ******************/
+
+/*********************************************************/
+/******************* Large Desktop >1440px ***************/
+/*********************************************************/
+
+@media screen and (min-width: 1441px) {
+    /****************** Header ******************/
+    .xlarge {
+        display: block;
+    }
+    .normal {
+        display: none;
+    }
+    /****************** MainSearchResult ******************/
+    .cardsMainSearchResult > article > a > .large,
+    .cardsMainSearchResult > article > a > .medium,
+    .cardsMainSearchResult > article > a > .small {
+        display: none;
+    }
+    .cardsMainSearchResult > article > a > .xlarge {
+        display: block;
+    }
+    /****************** Popular ******************/
+    .cardsPopular > article > a > .large,
+    .cardsPopular > article > a > .medium,
+    .cardsPopular > article > a > .small {
+        display: none;
+    }
+    .cardsPopular > article > a > .xlarge {
+        display: block;
+    }
+    /****************** Activities ******************/
+    .activities_cards > article > a > .large,
+    .activities_cards > article > a > .medium,
+    .activities_cards > article > a > .small {
+        display: none;
+    }
+    .activities_cards > article > a > .xlarge {
+        display: block;
+    }
+}
 @media screen and (max-width: 1250px) {
-    .cardsMarseille > article {
+    .cardsMainSearchResult > article {
         width: 50%;
     }
 }
-@media screen and (max-width: 1024px) {
+
+/*********************************************************/
+/********************* Tablet <1024px *********************/
+/*********************************************************/
+
+@media screen and (max-width: 1023px) {
     /****************** Main ******************/
     .main {
         min-width: 768px;
@@ -407,19 +506,28 @@ footer > nav  li {
     .searchResult {
         flex-direction: column;
     }
-    /****************** Marseille ******************/
-    .marseilleSearchResult {
+    /****************** MainSearchResult ******************/
+    .mainSearchResult {
         margin-right: 0px;
         margin-bottom: 50px;
+    }
+    .cardsMainSearchResult > article > a > .xlarge,
+    .cardsMainSearchResult > article > a > .large,
+    .cardsMainSearchResult > article > a > .small {
+        display: none;
+    }
+    .cardsMainSearchResult > article > a > .medium {
+        display: block;
     }
     /****************** Popular ******************/
     .popular {
         width: auto;
     }
+
     .popular .popularHeader {
         margin-bottom: 20px;
     }
-    .cardsMarseille > article {
+    .cardsMainSearchResult > article {
         width: 33.33%;
     }
     .cardsPopular {
@@ -435,13 +543,33 @@ footer > nav  li {
     .cardsPopular > article > a > .popularArticleDescription {
         overflow: scroll;
     }
+    .cardsPopular > article > a > .xlarge,
+    .cardsPopular > article > a > .large,
+    .cardsPopular > article > a > .small {
+        display: none;
+    }
+    .cardsPopular > article > a > .medium {
+        display: block;
+    }
     /****************** Activities ******************/
     .activities_cards > article > a > img {
         height: 200px;
     }
+    .activities_cards > article > a > .xlarge,
+    .activities_cards > article > a > .large,
+    .activities_cards > article > a > .small {
+        display: none;
+    }
+    .activities_cards > article > a > .medium {
+        display: block;
+    }
 }
 
-@media screen and (max-width: 768px) {
+/*********************************************************/
+/********************* Mobile <768px **********************/
+/*********************************************************/
+
+@media screen and (max-width: 767px) {
     body {
         width: 100%;
     }
@@ -495,7 +623,7 @@ footer > nav  li {
         margin-left: 20px;
         margin-right: 20px;
     }
-    .research .subtitle{
+    .research .subtitle {
         font-size: 16px;
     }
     .researchInput {
@@ -508,8 +636,9 @@ footer > nav  li {
         margin-left: -15px;
         z-index: 3;
     }
-    .researchButton svg {
+    .researchButton i {
         display: block;
+        font-size: 17px;
     }
     .researchButton span {
         display: none;
@@ -538,7 +667,7 @@ footer > nav  li {
     .filter svg {
         flex-shrink: 0;
     }
-    .filter .buttonContainer a .buttonBorder h3{
+    .filter .buttonContainer a .buttonBorder h3 {
         font-size: 14px;
         margin: 15px 0px 15px 10px;
     }
@@ -570,30 +699,46 @@ footer > nav  li {
         margin-right: 0px;
         margin-bottom: 15px;
     }
-    /****************** Marseille ******************/
-    .marseilleSearchResult {
-        margin-bottom: 0px; /*????????*/
+    .cardsPopular > article > a > .xlarge,
+    .cardsPopular > article > a > .large,
+    .cardsPopular > article > a > .medium {
+        display: none;
+    }
+    .cardsPopular > article > a > .small {
+        display: block;
+    }
+    /****************** MainSearchResult ******************/
+    .mainSearchResult {
+        margin-bottom: 0px;
         margin-top: 15px;
         padding-left: 20px;
         padding-right: 20px;
         background-color: white;
     }
-    .marseilleSearchResult h2{
+    .mainSearchResult h2 {
         margin-top: 20px;
         margin-bottom: 15px;
     }
-    .cardsMarseille {
+    .cardsMainSearchResult {
         flex-direction: column;
     }
-    .cardsMarseille > article {
+    .cardsMainSearchResult > article {
         width: auto;
     }
-    .cardsMarseille > article a {
+    .cardsMainSearchResult > article a {
         margin-right: 0;
         margin-bottom: 15px;
     }
-    .more{
-        margin-bottom:20px;
+    .more {
+        margin-bottom: 20px;
+    }
+    .cardsMainSearchResult > article > a > .xlarge,
+    .cardsMainSearchResult > article > a > .large,
+    .cardsMainSearchResult > article > a > .medium {
+        display: none;
+    }
+    .cardsMainSearchResult > article > a > .small {
+        display: block;
     }
     /****************** Activities ******************/
     .activities {
@@ -601,13 +746,12 @@ footer > nav  li {
         margin-top: 35px;
         margin-left: 0px;
         margin-right: 0px;
-        margin-bottom: 35px; 
+        margin-bottom: 35px;
     }
     .activities > div {
         padding: 30px 30px 15px 30px;
-
     }
-    .activities > div > h2{
+    .activities > div > h2 {
         margin-bottom: 30px;
     }
     .activities_cards {
@@ -622,6 +766,14 @@ footer > nav  li {
     }
     .activities_cards > article > a {
         margin-right: 0px;
+    }
+    .activities_cards > article > a > .xlarge,
+    .activities_cards > article > a > .large,
+    .activities_cards > article > a > .medium {
+        display: none;
+    }
+    .activities_cards > article > a > .small {
+        display: block;
     }
     /****************** Footer ******************/
     footer {
@@ -639,7 +791,7 @@ footer > nav  li {
     footer > nav:nth-child(1) {
         margin-top: 30px;
     }
-    footer > nav:nth-child(3){
+    footer > nav:nth-child(3) {
         margin-bottom: 30px;
     }
 }
